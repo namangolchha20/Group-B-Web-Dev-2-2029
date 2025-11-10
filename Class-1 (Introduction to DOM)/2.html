@@ -19,12 +19,37 @@
         <li>10</li>
     </ul>
 
+
+
+   
+
     <button id="fixBtn">Fix List</button>
     
 
     <script>
+      const btn = document.getElementById("fixBtn")
+
+      btn.addEventListener('click', function(){
+         const myList = document.querySelector('ul')
+         console.log(myList)
+
+       const allItems = myList.querySelectorAll('li')
+
+       console.log(allItems)
+
+       const placeThatHas8 =  allItems[6]
+
+       console.log(placeThatHas8)
+
+      const li7 =  document.createElement('li')
+      li7.innerText = '7'
        
-       
+
+       // insertBefore
+       myList.insertBefore(li7,placeThatHas8 )
+         
+      })
+          
 
     </script>
 </body>
